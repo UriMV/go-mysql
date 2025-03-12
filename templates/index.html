@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <!-- Menú de navegación -->
+    <nav>
+        <div class="nav-container">
+            <a href="/index" class="nav-logo">Inicio</a>
+            <div class="nav-links" id="nav-links">
+                <a href="/index">Inicio</a>
+                <a href="/profile">Perfil</a>
+                <a href="/employees">Empleados</a>
+                <a href="/logout">Cerrar sesión</a>
+
+            </div>
+            <button class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="welcome-message">
+        <h1>Bienvenido, {{.Username}}!</h1>
+        <p>Has iniciado sesión correctamente.</p>
+    </div>
+
+    <script src="/static/scripts.js"></script>
+</body>
+</html>

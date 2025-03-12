@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Empleados</title>
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="/index" class="nav-logo">Inicio</a>
+            <div class="nav-links" id="nav-links">
+                <a href="/index">Inicio</a>
+                <a href="/profile">Perfil</a>
+                <a href="/employees">Empleados</a>
+                <a href="/logout">Cerrar sesión</a>
+
+            </div>
+            <button class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Gestión de Empleados</h1>
+        <button id="addEmployeeBtn">Agregar Empleado</button>
+        <table id="employeeTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Email</th>
+                    <th>Rol</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Los empleados se cargarán aquí dinámicamente -->
+            </tbody>
+        </table>
+    </div>
+
+<!-- Modal para agregar/editar empleados -->
+<div id="employeeModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modalTitle">Agregar Empleado</h2>
+        <form id="employeeForm">
+            <input type="hidden" id="employeeId">
+            <input type="text" id="name" placeholder="Nombre" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="text" id="role" placeholder="Rol" required>
+            <button type="submit">Guardar</button>
+        </form>
+    </div>
+</div>
+
+    <script src="/static/employees.js"></script>
+</body>
+</html>
