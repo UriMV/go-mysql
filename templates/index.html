@@ -9,24 +9,25 @@
 </head>
 <body>
     <!-- Menú de navegación -->
-    <nav>
+    <nav class="modern-nav">
         <div class="nav-container">
-            <a href="/index" class="nav-logo">Inicio</a>
+            <a href="/index" class="nav-logo">
+                <span class="logo-text">Inicio</span>
+                <span class="logo-highlight"></span>
+            </a>
             <div class="nav-links" id="nav-links">
-                <a href="/index">Inicio</a>
-                <a href="/profile">Perfil</a>
-                <a href="/employees">Empleados</a>
-                <a href="/logout">Cerrar sesión</a>
-
+                <a href="/index" class="nav-link"><span>Inicio</span></a>
+                <a href="/profile" class="nav-link"><span>Perfil</span></a>
+                <a href="/employees" class="nav-link"><span>Empleados</span></a>
+                <a href="/logout" class="nav-link highlight"><span>Cerrar sesión</span></a>
             </div>
-            <button class="nav-toggle" id="nav-toggle">
+            <button class="nav-toggle" id="nav-toggle" aria-label="Menú">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
         </div>
     </nav>
-
     <!-- Contenido principal -->
     <div class="welcome-message">
         <h1>Bienvenido, {{.Username}}!</h1>
