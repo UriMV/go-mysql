@@ -3,32 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login y Registro</title>
-    <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+    <title>Iniciar Sesión</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
-    <div class="form-structor">
-        <div class="signup">
-            <h2 class="form-title" id="signup"><span>o</span>Regístrate</h2>
-            <form method="POST" action="/register" class="form-holder">
-                <input type="text" class="input" name="username" placeholder="Usuario" required />
-                <input type="password" class="input" name="password" placeholder="Contraseña" required />
-                <input type="password" class="input" name="confirm_password" placeholder="Confirmar Contraseña" required />
-                <button type="submit" class="submit-btn">Regístrate</button>
-            </form>
+    <div class="login-container">
+        <div class="login-header">
+            <h1 class="login-title">Iniciar Sesión</h1>
+            <p class="login-subtitle">Ingresa tus credenciales para acceder</p>
         </div>
-        <div class="login slide-up">
-            <div class="center">
-                <h2 class="form-title" id="login"><span>o</span>Inicia Sesión</h2>
-                <form method="POST" action="/login" class="form-holder">
-                    <input type="text" class="input" name="username" placeholder="Usuario" required />
-                    <input type="password" class="input" name="password" placeholder="Contraseña" required />
-                    <button type="submit" class="submit-btn">Inicia Sesión</button>
-                </form>
+        
+        <form method="POST" action="/login">
+            <div class="form-group">
+                <label for="username">Usuario</label>
+                <input type="text" id="username" name="username" class="form-control" placeholder="Ingresa tu usuario" required>
             </div>
+            
+            <div class="form-group">
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password" class="form-control" placeholder="Ingresa tu contraseña" required>
+            </div>
+            
+            <button type="submit" class="login-btn">Iniciar Sesión</button>
+        </form>
+        
+        <div class="login-footer">
+            ¿Problemas para ingresar? <a href="#">Contacta al soporte</a>
         </div>
     </div>
-    <script src="/static/scripts.js"></script>
 </body>
 </html>
